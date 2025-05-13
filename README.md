@@ -1,3 +1,5 @@
+# Using 'flip=flop neurons' to model the basal ganglia
+
 # Introduction
 
 Understanding and processing sequential data is a fundamental challenge in various domains, including natural language processing, computational neuroscience, and reinforcement learning. Traditional models often struggle with balancing memory efficiency, computational complexity, and performance when dealing with long sequences or highly dynamic tasks. This project explores innovative neural architectures to address these challenges, combining insights from neuroscience and machine learning.
