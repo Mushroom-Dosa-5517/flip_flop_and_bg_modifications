@@ -1,4 +1,4 @@
-# Using 'flip=flop neurons' to model the basal ganglia
+# Using 'flip-flop neurons' to model the basal ganglia
 
 # Introduction
 
