@@ -40,7 +40,8 @@ Collectively, these studies contribute to a deeper understanding of how speciali
 The flip-flop neuron works on the principle of the “JK flip-flop” device in digital logic; the cell keeps the previous part of the sequence in mind while processing the next part. This is useful in sequence processing tasks such as sentiment analysis. The given paper[1] proposes a fully connected bidirectional network of such neurons. The input sequence is processed in both directions, thus allowing the neurons to learn a lot of information about the relationship of a part of the input with both the previous and the next part of the input.
 
 In this project, we implemented the described architecture in PyTorch. This is a diagram of the flip-flop architecture[1]:
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/429de907-7607-47c5-9da4-130d3a5fdb00/82d1440e-4d79-4613-a7ac-fbeb39437681/image.png)
+![image](https://github.com/user-attachments/assets/51cabfb3-ccae-466f-bf1c-65aeb67ca793)
+
 
 And this is a detailed diagram of the architecture:
 
