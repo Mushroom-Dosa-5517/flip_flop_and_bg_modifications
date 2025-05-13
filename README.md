@@ -45,7 +45,8 @@ In this project, we implemented the described architecture in PyTorch. This is a
 
 And this is a detailed diagram of the architecture:
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/429de907-7607-47c5-9da4-130d3a5fdb00/b57fb76f-7bbf-4566-b267-ad7e098c7abe/image.png)
+![image](https://github.com/user-attachments/assets/e04f5d90-4589-44f3-9385-5737fa83dac1)
+
 
 ### Addition of memory chunking
 
@@ -53,7 +54,8 @@ Recurrent neural networks, which are commonly used for sequence processing, have
 
 In this project, we integrated HRNNs into the existing architecture by replacing the bidirectional and fully connected layer of flip-flop neurons with a HRNN of flip-flop neurons which divides the input sequence into chunks, processes each chunk to get an intermediate representation and then processes the intermediate representation again. The architecture is shown below:
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/429de907-7607-47c5-9da4-130d3a5fdb00/6f9adf98-494e-4768-a7d2-6ce7b70bd816/image.png)
+![image](https://github.com/user-attachments/assets/8f9880ee-8aa9-47ed-8e4c-2298cf857071)
+
 
 ## Basal Ganglia
 
@@ -61,7 +63,8 @@ In this project, we integrated HRNNs into the existing architecture by replacing
 
 The basal ganglia is a group of nuclei in the brain that controls voluntary movements, emotions, and other behaviors. The paper[2] proposes the following architecture to model a basal ganglia for working memory tasks. 
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/429de907-7607-47c5-9da4-130d3a5fdb00/ecb196f1-4adb-46af-9261-d9e761df9a90/image.png)
+![image](https://github.com/user-attachments/assets/16f29b78-be74-45e8-b9fa-71e308829956)
+
 
 We implemented this in PyTorch using linear layers for the GPe - STN and GPI output layers. Additionally, we also integrated the RL framework proposed in the paper for calculating the Q-value at time t to minimize the TD error. The equations for TD error and Q-value respectively are as follows:
 
@@ -77,7 +80,8 @@ $$
 
 In the modified architecture, we replaced the FF neurons in both the striatal d1 and d2 layers with HRNNs of flip-flop neurons. The rest of the architecture was left as is. This is a description of the modified architecture:
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/429de907-7607-47c5-9da4-130d3a5fdb00/074834cf-21a3-44b4-99cf-e81b6a0ab9a4/image.png)
+![image](https://github.com/user-attachments/assets/0c6b5dd7-e42d-4c65-a042-04acc9cb9165)
+
 
 # Results
 
@@ -85,7 +89,8 @@ In the modified architecture, we replaced the FF neurons in both the striatal d1
 
 Both the Bi-FFNN architecture and the HRNN architecture were trained on the sentiment analysis task. The IMDB movie reviews dataset from kaggle was used, with a 70-20-10 train-val-test split. Both models were trained for 10 epochs with the Adam optimizer and a learning rate of 0.001.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/429de907-7607-47c5-9da4-130d3a5fdb00/7aed677c-a872-4d4a-8846-ccc7151e906d/image.png)
+![image](https://github.com/user-attachments/assets/297e36ef-4c52-437d-8bfa-9c10d354f2c3)
+
 
 | Model | Validation Loss | Validation Accuracy | Test Loss | Test Accuracy |
 | --- | --- | --- | --- | --- |
@@ -107,7 +112,8 @@ chunk_size = 5 #used only in HRNN model
 stn_gpe_units = 20
 ```
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/429de907-7607-47c5-9da4-130d3a5fdb00/ab5260bc-acb6-4472-9ccb-e137c4b97ad9/image.png)
+![image](https://github.com/user-attachments/assets/c6f342b5-d98f-4b78-b459-ea9eed7774a9)
+
 
 | Model | Final Loss | Final Accuracy |
 | --- | --- | --- |
@@ -118,9 +124,9 @@ stn_gpe_units = 20
 
 Furthermore, we observed the effect of allowing only one striatal pathway (d1 or d2) to remain open at a time. The results are as follows:
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/429de907-7607-47c5-9da4-130d3a5fdb00/9c953745-d819-4370-b3db-99ca05fb899f/image.png)
+![image](https://github.com/user-attachments/assets/ee4b4c58-491b-43b6-9203-3ee7a205635f)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/429de907-7607-47c5-9da4-130d3a5fdb00/f6c6ada5-ce29-4f69-9ea4-e6fc6c527206/image.png)
+![image](https://github.com/user-attachments/assets/4cb7cdf5-3020-496b-9026-ae4a8956eeb1)
 
 # Discussion
 
